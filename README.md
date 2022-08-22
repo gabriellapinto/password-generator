@@ -2,7 +2,7 @@
 
 ## Description
 
-In this assignment, the goal was to make a working password generator using JavaScript.
+In this assignment, the goal was to make a working password generator using JavaScript. I added a generatePassword function that asked the user what kind of password they wanted and then returned that value at the end to generate their password on the screen. 
 
 ## Made With
 
