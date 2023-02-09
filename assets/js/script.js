@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Generate Password Function
 function generatePassword() {
   var passLength = window.prompt("How long would you like your password?");
-
+console.log(passLength);
   // This if statement confirms the password length and makes sure it is within the correct range
   if (passLength < 8 || passLength > 128) {
     window.alert("Your password MUST be between 8 and 128 characters.")
@@ -48,11 +48,17 @@ function generatePassword() {
     passwordContainer.push(lowercaseList);
   }
 
-  // This for loop randomizes the password
-  // for (i = 0; i < passLength.length; i++) {
-  //   var generatedPassword = Math.floor(Math.random()* passwordContainer.length);
-  // }
+  // Empty array for password to be added to
+  var generatedPassword = "";
 
+  // This for loop randomizes the password by grabbing random indexes from the arrays and adding them to
+  for (i = 0; i < passLength; i++) {
+    var containerIndex = Math.floor(Math.random()* passwordContainer.length);
+    var randomArray = passwordContainer[containerIndex];
+    var randomIndex = Math.floor(Math.random()* randomArray.length);
+    var randomCharacter = randomArray[randomIndex];
+    generatedPassword += randomCharacter;
+  }
 
 return generatedPassword;
 }
