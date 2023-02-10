@@ -4,7 +4,7 @@ var generateBtn = document.querySelector("#generate");
 // Generate Password Function
 function generatePassword() {
   var passLength = window.prompt("How long would you like your password?");
-console.log(passLength);
+
   // This if statement confirms the password length and makes sure it is within the correct range
   if (passLength < 8 || passLength > 128) {
     window.alert("Your password MUST be between 8 and 128 characters.")
